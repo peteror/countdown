@@ -546,7 +546,7 @@ var index = (function (_ref) {
 
 					// if there's a card above me, my back is visible, and the above card is falling
 					if (cardAbove && card.visual_progress > .5 && card.visual_progress > 0) {
-						card.shadowBack = easeOutCubic(cardAbove.visual_progress);
+	//					card.shadowBack = easeOutCubic(cardAbove.visual_progress);
 					}
 				});
 
@@ -1359,7 +1359,9 @@ var fit = function fit(state) {
 	state.fitInfo.currentWidth = state.root.scrollWidth;
 
 	// let's calculate the new font size
-	var newFontSize = Math.min(Math.max(4, state.fitInfo.availableWidth / state.fitInfo.currentWidth * state.fitInfo.currentFontSize), 1024);
+	var newFontSize = 100
+
+	//Math.min(Math.max(4, state.fitInfo.availableWidth / state.fitInfo.currentWidth * state.fitInfo.currentFontSize), 1024);
 
 	// size has not changed enough?
 	var dist = Math.abs(newFontSize - state.fitInfo.currentFontSize);
@@ -3778,17 +3780,6 @@ var Tick = function () {
 			// done with init
 			this._didInit(this, this.value);
 
-			// credits
-			if (this._credits) {
-				var credits = document.createElement('a');
-				credits.className = 'tick-credits';
-				credits.href = this._credits.url;
-				credits.tabindex = -1;
-				credits.target = '_blank';
-				credits.rel = 'noopener noreferrer';
-				credits.textContent = this._credits.label;
-				this._element.appendChild(credits);
-			}
 		}
 	}, {
 		key: '_update',
@@ -3880,14 +3871,14 @@ var constants = {
 	MONTH_SINGULAR: 'Month',
 	WEEK_PLURAL: 'Weeks',
 	WEEK_SINGULAR: 'Week',
-	DAY_PLURAL: 'Days',
-	DAY_SINGULAR: 'Day',
-	HOUR_PLURAL: 'Hours',
-	HOUR_SINGULAR: 'Hour',
-	MINUTE_PLURAL: 'Minutes',
-	MINUTE_SINGULAR: 'Minute',
-	SECOND_PLURAL: 'Seconds',
-	SECOND_SINGULAR: 'Second',
+	DAY_PLURAL: 'ثــــانية',
+	DAY_SINGULAR: 'ثــــانية',
+	HOUR_PLURAL: 'دقيـــقة',
+	HOUR_SINGULAR: 'دقيـــقة',
+	MINUTE_PLURAL: 'ســـــاعة',
+	MINUTE_SINGULAR: 'ســـــاعة',
+	SECOND_PLURAL: 'يــــــــوم',
+	SECOND_SINGULAR: 'يــــــــوم',
 	MILLISECOND_PLURAL: 'Milliseconds',
 	MILLISECOND_SINGULAR: 'Millisecond'
 };
